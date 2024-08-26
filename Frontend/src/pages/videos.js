@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button, Form, Input } from "antd";
 import Modal from "../components/modal";
 
@@ -106,12 +107,13 @@ function Videos() {
           <Button onClick={() => setShowForm(true)}>Create</Button>
         </div>
         <div className="mt-5 grid grid-cols-5 gap-4 justify-between">
-          {testData.map((video) => (
+          {testData.map((video) => (<Link to={`/video/${video.id}`}>
             <div>
               <img className="pt-0" src={video.thumbnail} />
               <h3 className="text-white text-xl mb-0 pb-0">{video.name}</h3>
               <h4 className="text-zinc-300">{video.artist}</h4>
             </div>
+            </Link>
           ))}
         </div>
       </div>
