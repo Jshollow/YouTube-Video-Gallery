@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Videos from "./pages/videos";
 import Video from "./pages/video";
+import "./App.css";
 
 function App() {
   return (
